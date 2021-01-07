@@ -35,12 +35,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-instagram',
-      options: {
-        username: 'elm45',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
         production: true,
