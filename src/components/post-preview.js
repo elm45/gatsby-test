@@ -20,8 +20,11 @@ const PostPreview = ({ post }) => (
     <Link
       to={post.slug}
       css={css`
+        flex: 0 0 auto;
         margin: 1rem 1rem 0 0;
-        width: 100px
+        width: 100px;
+        display: block;
+        border-bottom: none;
       `}
     >
       <Image
@@ -39,7 +42,7 @@ const PostPreview = ({ post }) => (
         <Link to={post.slug}>{post.title}</Link>
       </h3>
       <p>{post.excerpt}</p>
-      <ReadLink to={post.slug}>read this post &rarr;</ReadLink>
+      <ReadLink to={post.slug}>Read <span className='symbol symbol--right'>&#9658;</span></ReadLink>
     </div>
   </article>
 );

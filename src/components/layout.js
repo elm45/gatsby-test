@@ -2,6 +2,7 @@ import React from 'react';
 import { Global, css } from '@emotion/core';
 import Helmet from 'react-helmet';
 import Header from './header';
+import Footer from './footer';
 import useSiteMetadata from '../hooks/use-sitemetadata'
 
 const Layout = ({ children }) => {
@@ -36,13 +37,19 @@ const Layout = ({ children }) => {
           }
         }
 
+        div#gatsby-focus-wrapper {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
         h1,
         h2,
         h3,
         h4,
         h5,
         h6 {
-          color: #222;
+          color: #113353;
           line-height: 1.1;
 
           + * {
@@ -52,6 +59,24 @@ const Layout = ({ children }) => {
 
         strong {
           color: #222;
+        }
+
+        a {
+          color: #1d5987;
+          display: inline-flex;
+          align-items: center;
+          text-decoration: none;
+          border-bottom: 1px solid;
+        }
+
+        a .symbol {
+          font-size: .6rem;
+        }
+        a .symbol--left {
+          padding-right: .25rem;
+        }
+        a .symbol--right {
+          padding-left: .25rem;
         }
 
         li {
@@ -73,6 +98,7 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
+      <Footer />
     </>
   );
 }
